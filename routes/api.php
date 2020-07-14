@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Http\Request;
+// // Display all SQL executed in Eloquent
+// \Event::listen('illuminate.query', function($query)
+// {
+//     var_dump($query);
+// });
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
